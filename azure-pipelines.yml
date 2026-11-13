@@ -27,9 +27,10 @@ stages:
 
 - stage: manualapproval
   depends_On: terraformplan
-  pool: server
+  
   jobs:
   - job: manualapproval
+    pool: server
     steps:
     - task: ManualValidation@1
       inputs:
