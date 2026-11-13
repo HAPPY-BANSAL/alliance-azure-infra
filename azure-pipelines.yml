@@ -40,7 +40,7 @@ stages:
 
 
 - stage: terraformapply
-  depends_on: manualapproval
+  dependsOn: manualapproval
   jobs:
   - job: apply
     steps:
