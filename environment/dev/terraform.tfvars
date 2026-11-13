@@ -3,5 +3,14 @@ resource_group = {
     name     = "rg-alliance"
     location = "centralindia"
   }
+<<<<<<< HEAD
 }
 
+=======
+
+  rg2 = {
+    name = "rg-axion"
+    location = "eastus"
+  }
+}
+>>>>>>> origin/main
