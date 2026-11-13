@@ -3,4 +3,9 @@ resource_group = {
     name     = "rg-alliance"
     location = "centralindia"
   }
+
+  rg2 = {
+    name = "rg-axion"
+    location = "eastus"
+  }
 }
