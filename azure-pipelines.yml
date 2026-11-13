@@ -26,7 +26,7 @@ stages:
         environmentServiceNameAzureRM: 'azure-svc'
 
 - stage: manualapproval
-  depends_On: terraformplan
+  depends_on: terraformplan
   
   jobs:
   - job: manualapproval
