@@ -35,8 +35,8 @@ stages:
     steps:
     - task: ManualValidation@1
       inputs:
-        notifyUsers: 'admin@company.com'
-        approvers: 'admin@company.com'
+        notifyUsers: 'abc@abc.com'
+        approvers: 'abc@abc.com'
 
 
 - stage: terraformapply
