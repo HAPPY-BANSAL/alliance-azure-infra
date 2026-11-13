@@ -4,6 +4,11 @@ resource_group = {
     location = "centralindia"
   }
    rg2 = {
+
+
+
+
+  rg2 = {
     name = "rg-axion"
     location = "eastus"
   }
@@ -13,4 +18,6 @@ resource_group = {
     location = "eastus"
   }
  }
+
+}
 
