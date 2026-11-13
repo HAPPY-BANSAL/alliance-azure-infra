@@ -60,3 +60,6 @@ stages:
         command: 'apply'
         workingDirectory: '$(System.DefaultWorkingDirectory)/environment/dev'
         environmentServiceNameAzureRM: 'azure-svc'  
+
+
+        
