@@ -7,4 +7,10 @@ resource_group = {
     name = "rg-axion"
     location = "eastus"
   }
+
+  rg3 = {
+    name = "rg-infra"
+    location = "eastus"
+  }
  }
+
