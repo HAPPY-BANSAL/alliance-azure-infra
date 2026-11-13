@@ -4,3 +4,4 @@ resource_group = {
     location = "centralindia"
   }
 }
+
