@@ -4,6 +4,13 @@ trigger:
 - main
 - feature/*
 
+parameters:
+- name: environment
+  type: string
+  values:
+  - dev
+  - Uat
+
 stages:
 - stage: terraformplan
   jobs: 
@@ -13,7 +20,7 @@ stages:
       inputs:
         provider: 'azurerm'
         command: 'init'
-        workingDirectory: '$(System.DefaultWorkingDirectory)/environment/dev'
+        workingDirectory: '$(System.DefaultWorkingDirectory)/environment/${{parameters.environment}}'
         backendServiceArm: 'azure-svc'
         backendAzureRmStorageAccountName: 'backendstorageaccount01'
         backendAzureRmContainerName: 'tfsttae'
@@ -22,7 +29,7 @@ stages:
       inputs:
         provider: 'azurerm'
         command: 'plan'
-        workingDirectory: '$(System.DefaultWorkingDirectory)/environment/dev'
+        workingDirectory: '$(System.DefaultWorkingDirectory)/environment/${{parameters.environment}}'
         environmentServiceNameAzureRM: 'azure-svc'
 
 - stage: manualapproval
@@ -48,7 +55,7 @@ stages:
       inputs:
         provider: 'azurerm'
         command: 'init'
-        workingDirectory: '$(System.DefaultWorkingDirectory)/environment/dev'
+        workingDirectory: '$(System.DefaultWorkingDirectory)/environment/${{parameters.environment}}'
         backendServiceArm: 'azure-svc'
         backendAzureRmStorageAccountName: 'backendstorageaccount01'
         backendAzureRmContainerName: 'tfsttae'
@@ -58,7 +65,7 @@ stages:
       inputs:
         provider: 'azurerm'
         command: 'apply'
-        workingDirectory: '$(System.DefaultWorkingDirectory)/environment/dev'
+        workingDirectory: '$(System.DefaultWorkingDirectory)/environment/${{parameters.environment}}'
         environmentServiceNameAzureRM: 'azure-svc'  
 
 
